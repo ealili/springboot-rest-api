@@ -1,4 +1,4 @@
-package mrtech.springbootrestapi.service;
+package mrtech.springbootrestapi.service.administrator;
 
 import mrtech.springbootrestapi.pojo.Administrator;
 

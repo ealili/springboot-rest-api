@@ -1,4 +1,4 @@
-package mrtech.springbootrestapi.service;
+package mrtech.springbootrestapi.service.manufacturer;
 
 import mrtech.springbootrestapi.pojo.Manufacturer;
 import org.springframework.stereotype.Service;

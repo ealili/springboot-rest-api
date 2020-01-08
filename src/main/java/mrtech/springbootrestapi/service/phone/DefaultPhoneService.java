@@ -1,4 +1,4 @@
-package mrtech.springbootrestapi.service;
+package mrtech.springbootrestapi.service.phone;
 
 import mrtech.springbootrestapi.pojo.Phone;
 import mrtech.springbootrestapi.repository.PhoneRepository;
@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class DefaultPhoneService implements PhoneService {

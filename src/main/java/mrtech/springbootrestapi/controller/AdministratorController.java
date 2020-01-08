@@ -1,7 +1,7 @@
 package mrtech.springbootrestapi.controller;
 
 import mrtech.springbootrestapi.pojo.Administrator;
-import mrtech.springbootrestapi.service.AdministratorService;
+import mrtech.springbootrestapi.service.administrator.AdministratorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
