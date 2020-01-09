@@ -1,19 +1,19 @@
-# Spring Boot Rest Api
+# Mrtechspecs REST API
 
-## Endpoints
+This project contains the api for Mrtechspecs
 
-### Get all manufacturers 
-Get [here](http://localhost:8080/api/manufacturers)
 
-localhost:8080/api/manufacturers
+## Table of Contents
 
-### Get all phones 
-Get [here](http://localhost:8080/api/phones)
+1. [Dependencies](#dependencies)
+1. [Getting Started](#getting-started)
+1. [Database](#database)
+1. [REST Endpoints](#rest-endpoints]
 
-localhost:8080/api/phones
+## Dependencies
 
-### Get phone by id
-localhost:8080/api/phone/{id}
+## Getting Started
 
-### Get phones from a specific company
-localhost:8080/api/phones/{mname}
+## Database
+
+## REST Endpoints
