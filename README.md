@@ -3,12 +3,12 @@
 ## Endpoints
 
 ### Get all manufacturers 
-Get [here](localhost:8080/api/manufacturers)
+Get [here](http://localhost:8080/api/manufacturers)
 
 localhost:8080/api/manufacturers
 
 ### Get all phones 
-Get [here](localhost:8080/api/phones)
+Get [here](http://localhost:8080/api/phones)
 
 localhost:8080/api/phones
 
