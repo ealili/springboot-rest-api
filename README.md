@@ -8,7 +8,7 @@ This project contains the api for Mrtechspecs
 1. [Dependencies](#dependencies)
 1. [Getting Started](#getting-started)
 1. [Database](#database)
-1. [REST Endpoints](#rest-endpoints]
+1. [REST Endpoints](#rest-endpoints)
 
 ## Dependencies
 
