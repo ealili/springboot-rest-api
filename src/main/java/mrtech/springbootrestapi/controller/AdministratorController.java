@@ -3,10 +3,7 @@ package mrtech.springbootrestapi.controller;
 import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.service.administrator.AdministratorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -26,4 +23,10 @@ public class AdministratorController {
     public Administrator saveAdministrator(@RequestBody Administrator administrator) {
         return administratorService.save(administrator);
     }
+
+    @DeleteMapping("/administrator/delete/{username}")
+    public void deleteAdministrator(@PathVariable String username) {
+        administratorService.delete(username);
+    }
+
 }

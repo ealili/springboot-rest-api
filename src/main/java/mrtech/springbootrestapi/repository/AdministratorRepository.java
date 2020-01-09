@@ -13,4 +13,6 @@ public interface AdministratorRepository extends CrudRepository<Administrator, S
     Administrator findAdministratorByUsername(String username);
 
     Administrator save(Administrator administrator);
+
+    void delete(Administrator administrator);
 }

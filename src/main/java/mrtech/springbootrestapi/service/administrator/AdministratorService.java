@@ -8,4 +8,6 @@ public interface AdministratorService {
     Optional<Administrator> findAdministratorByUsernameAndPassword(Administrator administrator);
 
     Administrator save(Administrator administrator);
+
+    void delete(String username);
 }
