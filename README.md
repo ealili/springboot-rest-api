@@ -12,7 +12,26 @@ This project contains the api for Mrtechspecs
 
 ## Dependencies
 
+You will need:
+
+* [Spring Data JPA](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa)
+* [MySQL Connector](https://mvnrepository.com/artifact/mysql/mysql-connector-java)
+* [Spring WEB](https://mvnrepository.com/artifact/org.springframework/spring-web)
+* [JUnit Vintage Engine](https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine)
+* [Spring Boot Test Starter](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test)
+* [Spring Boot Maven Plugin](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin)
+
 ## Getting Started
+
+First, clone the project:
+
+```bash
+$ git clone https://github.com/ealili/springboot-rest-api.git
+```
+
+Second, open the project using your favorite IDE and install all the listed dependencies above and you should be able to run the application.
+
+If everything works, you should see a welcome page [here](http://127.0.0.1:8080/).
 
 ## Database
 
