@@ -3,6 +3,8 @@ package mrtech.springbootrestapi.controller;
 import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.service.administrator.AdministratorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -25,8 +27,11 @@ public class AdministratorController {
     }
 
     @DeleteMapping("/administrator/delete/{username}")
-    public void deleteAdministrator(@PathVariable String username) {
-        administratorService.delete(username);
+    public ResponseEntity<Void> deleteAdministrator(@PathVariable String username) {
+        if (administratorService.delete(username)) {
+            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
     }
 
 }

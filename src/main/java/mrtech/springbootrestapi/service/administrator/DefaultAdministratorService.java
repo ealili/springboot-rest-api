@@ -2,7 +2,6 @@ package mrtech.springbootrestapi.service.administrator;
 
 import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.repository.AdministratorRepository;
-import mrtech.springbootrestapi.service.administrator.AdministratorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,11 +27,13 @@ public class DefaultAdministratorService implements AdministratorService {
     }
 
     @Override
-    public void delete(String username) {
+    public boolean delete(String username) {
         Administrator administrator = administratorRepository.findAdministratorByUsername(username);
         if (administrator != null) {
             administratorRepository.delete(administrator);
+            return true;
         }
+        return false;
     }
 
 

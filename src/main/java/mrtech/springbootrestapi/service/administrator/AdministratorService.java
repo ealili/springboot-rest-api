@@ -9,5 +9,5 @@ public interface AdministratorService {
 
     Administrator save(Administrator administrator);
 
-    void delete(String username);
+    boolean delete(String username);
 }
