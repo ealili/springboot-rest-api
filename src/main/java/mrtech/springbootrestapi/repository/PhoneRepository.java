@@ -2,6 +2,7 @@ package mrtech.springbootrestapi.repository;
 
 import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.pojo.Phone;
+import mrtech.springbootrestapi.pojo.PhoneInput;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

@@ -16,6 +16,8 @@ public interface PhoneService {
 
     Phone save(PhoneInput phoneInput);
 
+    Phone update(String id, PhoneInput phoneInput);
+
     boolean delete(String id);
 }
 
