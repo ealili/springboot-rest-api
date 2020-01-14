@@ -10,4 +10,6 @@ public interface AdministratorService {
     Administrator save(Administrator administrator);
 
     boolean delete(String username);
+
+    Administrator update(String username, Administrator administrator);
 }

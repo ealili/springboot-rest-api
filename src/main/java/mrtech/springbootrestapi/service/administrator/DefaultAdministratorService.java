@@ -36,5 +36,17 @@ public class DefaultAdministratorService implements AdministratorService {
         return false;
     }
 
+    @Override
+    public Administrator update(String username, Administrator administrator) {
+        Administrator administratorToUpdate =
+                administratorRepository.findAdministratorByUsername(username);
 
+        if (administratorToUpdate == null) {
+            return null;
+        }
+
+        administratorRepository.delete(administratorToUpdate);
+        return administratorRepository.save(administrator);
+
+    }
 }
