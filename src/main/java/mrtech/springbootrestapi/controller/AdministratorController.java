@@ -26,6 +26,12 @@ public class AdministratorController {
         return administratorService.save(administrator);
     }
 
+    @PutMapping("/administrator/update/{username}")
+    public Administrator updateAdministrator(@PathVariable String username,
+                                             @RequestBody Administrator administrator) {
+        return administratorService.update(username, administrator);
+    }
+
     @DeleteMapping("/administrator/delete/{username}")
     public ResponseEntity<Void> deleteAdministrator(@PathVariable String username) {
         if (administratorService.delete(username)) {
