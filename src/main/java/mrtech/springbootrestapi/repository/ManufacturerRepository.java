@@ -8,5 +8,8 @@ import java.util.List;
 
 @Repository
 public interface ManufacturerRepository extends CrudRepository<Manufacturer, String> {
+
     List<Manufacturer> findAll();
+
+    Manufacturer findManufacturerByMname(String mname);
 }
