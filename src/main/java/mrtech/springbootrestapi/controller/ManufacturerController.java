@@ -3,6 +3,8 @@ package mrtech.springbootrestapi.controller;
 import mrtech.springbootrestapi.pojo.Manufacturer;
 import mrtech.springbootrestapi.service.manufacturer.ManufacturerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,6 +25,14 @@ public class ManufacturerController {
             produces = "application/json")
     public Manufacturer saveManufacturer(@RequestBody Manufacturer manufacturer) {
         return manufacturerService.save(manufacturer);
+    }
+
+    @DeleteMapping("/manufacturer/delete/{mname}")
+    public ResponseEntity<Void> deleteAdministrator(@PathVariable String mname) {
+        if (manufacturerService.delete(mname)) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
 }

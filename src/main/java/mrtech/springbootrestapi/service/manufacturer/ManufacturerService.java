@@ -10,4 +10,6 @@ public interface ManufacturerService {
     List<Manufacturer> findAll();
 
     Manufacturer save(Manufacturer manufacturer);
+
+    boolean delete(String mname);
 }
