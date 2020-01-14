@@ -4,6 +4,8 @@ import mrtech.springbootrestapi.pojo.Phone;
 import mrtech.springbootrestapi.pojo.PhoneInput;
 import mrtech.springbootrestapi.service.phone.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,5 +39,13 @@ public class PhoneController {
     @PostMapping(path = "/phone/save", consumes = "application/json", produces = "application/json")
     public Phone savePhone(@RequestBody PhoneInput phoneInput) {
         return phoneService.save(phoneInput);
+    }
+
+    @DeleteMapping("/phone/delete/{id}")
+    public ResponseEntity<Void> deletePhone(@PathVariable String id) {
+        if (phoneService.delete(id)) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }
