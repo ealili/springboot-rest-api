@@ -51,6 +51,7 @@ public class DefaultPhoneService implements PhoneService {
         phone.setId(formatId(phoneInput.getName()));
         phone.setName(phoneInput.getName());
         phone.setManufacturer(manufacturer);
+        phone.setSelfieCamera(phoneInput.getSelfieCamera());
         phone.setBattery(phoneInput.getBattery());
         phone.setDisplayResolution(phoneInput.getDisplayResolution());
         phone.setDisplaySize(phoneInput.getDisplaySize());
@@ -71,6 +72,20 @@ public class DefaultPhoneService implements PhoneService {
         id = Character.toLowerCase(id.charAt(0)) + id.substring(1);
         id = id.replaceAll("\\s+", "");
         return id;
+    }
+
+    @Override
+    public Phone update(String id, PhoneInput phoneInput) {
+        Phone phoneToUpdate =
+                phoneRepository.findPhoneById(id);
+
+        if (phoneToUpdate == null) {
+            return null;
+        }
+
+        phoneRepository.delete(phoneToUpdate);
+        return this.save(phoneInput);
+
     }
 
     @Override

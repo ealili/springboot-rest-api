@@ -1,5 +1,6 @@
 package mrtech.springbootrestapi.controller;
 
+import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.pojo.Phone;
 import mrtech.springbootrestapi.pojo.PhoneInput;
 import mrtech.springbootrestapi.service.phone.PhoneService;
@@ -39,6 +40,11 @@ public class PhoneController {
     @PostMapping(path = "/phone/save", consumes = "application/json", produces = "application/json")
     public Phone savePhone(@RequestBody PhoneInput phoneInput) {
         return phoneService.save(phoneInput);
+    }
+
+    @PutMapping("/phone/update/{id}")
+    public Phone updatePhone(@PathVariable String id, @RequestBody PhoneInput phoneInput) {
+        return phoneService.update(id, phoneInput);
     }
 
     @DeleteMapping("/phone/delete/{id}")
