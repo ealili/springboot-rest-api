@@ -15,5 +15,7 @@ public interface PhoneService {
     Phone findPhoneById(String id);
 
     Phone save(PhoneInput phoneInput);
+
+    boolean delete(String id);
 }
 

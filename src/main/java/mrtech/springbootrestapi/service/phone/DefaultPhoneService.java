@@ -1,5 +1,6 @@
 package mrtech.springbootrestapi.service.phone;
 
+import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.pojo.Manufacturer;
 import mrtech.springbootrestapi.pojo.Phone;
 import mrtech.springbootrestapi.pojo.PhoneInput;
@@ -70,5 +71,15 @@ public class DefaultPhoneService implements PhoneService {
         id = Character.toLowerCase(id.charAt(0)) + id.substring(1);
         id = id.replaceAll("\\s+", "");
         return id;
+    }
+
+    @Override
+    public boolean delete(String id) {
+        Phone phone = phoneRepository.findPhoneById(id);
+        if (phone != null) {
+            phoneRepository.delete(phone);
+            return true;
+        }
+        return false;
     }
 }
