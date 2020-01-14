@@ -12,4 +12,6 @@ public interface ManufacturerRepository extends CrudRepository<Manufacturer, Str
     List<Manufacturer> findAll();
 
     Manufacturer findManufacturerByMname(String mname);
+
+    Manufacturer save(Manufacturer manufacturer);
 }

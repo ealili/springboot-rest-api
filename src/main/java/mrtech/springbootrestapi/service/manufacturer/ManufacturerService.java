@@ -8,4 +8,6 @@ import java.util.List;
 @Service
 public interface ManufacturerService {
     List<Manufacturer> findAll();
+
+    Manufacturer save(Manufacturer manufacturer);
 }

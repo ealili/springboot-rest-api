@@ -2,7 +2,6 @@ package mrtech.springbootrestapi.service.manufacturer;
 
 import mrtech.springbootrestapi.pojo.Manufacturer;
 import mrtech.springbootrestapi.repository.ManufacturerRepository;
-import mrtech.springbootrestapi.service.manufacturer.ManufacturerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,5 +16,15 @@ public class DefaultManufacturerService implements ManufacturerService {
     @Override
     public List<Manufacturer> findAll() {
         return manufacturerRepository.findAll();
+    }
+
+    @Override
+    public Manufacturer save(Manufacturer manufacturer) {
+        //Check if this manufacturer already exists!
+        if (manufacturerRepository.findManufacturerByMname(manufacturer.getMname()) != null) {
+            return null;
+        }
+
+        return manufacturerRepository.save(manufacturer);
     }
 }
