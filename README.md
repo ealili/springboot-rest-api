@@ -26,6 +26,7 @@ You will need:
 * [Spring Data JPA](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa)
 * [MySQL Connector](https://mvnrepository.com/artifact/mysql/mysql-connector-java)
 * [Spring WEB](https://mvnrepository.com/artifact/org.springframework/spring-web)
+* [JUnit](https://mvnrepository.com/artifact/junit/junit)
 * [JUnit Vintage Engine](https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine)
 * [Spring Boot Test Starter](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test)
 * [Spring Boot Maven Plugin](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin)
