@@ -5,10 +5,19 @@ This project contains the api for Mrtechspecs
 
 ## Table of Contents
 
+1. [Tools](#tools)
 1. [Dependencies](#dependencies)
 1. [Getting Started](#getting-started)
 1. [Database](#database)
 1. [REST Endpoints](#rest-endpoints)
+
+## Tools 
+
+You will need:
+
+* [Maven](https://maven.apache.org/) as your build tool
+* Your favorite IDE
+* JDK 1.8+
 
 ## Dependencies
 
