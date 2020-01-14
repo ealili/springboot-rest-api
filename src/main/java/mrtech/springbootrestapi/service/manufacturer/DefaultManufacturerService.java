@@ -27,4 +27,15 @@ public class DefaultManufacturerService implements ManufacturerService {
 
         return manufacturerRepository.save(manufacturer);
     }
+
+    @Override
+    public boolean delete(String mname) {
+        Manufacturer manufacturer =
+                manufacturerRepository.findManufacturerByMname(mname);
+        if (manufacturer != null) {
+            manufacturerRepository.delete(manufacturer);
+            return true;
+        }
+        return false;
+    }
 }
