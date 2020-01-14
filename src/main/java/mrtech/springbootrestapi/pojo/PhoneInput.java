@@ -1,17 +1,9 @@
 package mrtech.springbootrestapi.pojo;
 
 
-import javax.persistence.*;
+public class PhoneInput {
 
-@Entity
-@Table(name = "phone")
-public class Phone {
-    @Id
-    private String id;
-    @ManyToOne
-    @JoinColumn(name = "mname")
-    private Manufacturer manufacturer;
-
+    private String mname;
     private String battery;
     private String displayResolution;
     private String displaySize;
@@ -26,26 +18,35 @@ public class Phone {
     private String technology;
     private String os;
 
-    public Phone() {
+    public PhoneInput() {
     }
 
-
-
-
-    public String getId() {
-        return id;
+    public PhoneInput(String mname, String battery, String displayResolution, String displaySize, String displayType,
+                      String imgSource, String selfieCamera, String mainCamera, String name, String weight,
+                      Integer productionYear, String sound, String technology, String os)
+    {
+        this.mname = mname;
+        this.battery = battery;
+        this.displayResolution = displayResolution;
+        this.displaySize = displaySize;
+        this.displayType = displayType;
+        this.imgSource = imgSource;
+        this.selfieCamera = selfieCamera;
+        this.mainCamera = mainCamera;
+        this.name = name;
+        this.weight = weight;
+        this.productionYear = productionYear;
+        this.sound = sound;
+        this.technology = technology;
+        this.os = os;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getMname(){
+        return mname;
     }
 
-    public Manufacturer getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(Manufacturer manufacturer) {
-        this.manufacturer = manufacturer;
+    public void setMname(String mname){
+        this.mname = mname;
     }
 
     public String getBattery() {
