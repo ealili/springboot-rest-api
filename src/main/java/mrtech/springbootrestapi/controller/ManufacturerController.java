@@ -3,9 +3,7 @@ package mrtech.springbootrestapi.controller;
 import mrtech.springbootrestapi.pojo.Manufacturer;
 import mrtech.springbootrestapi.service.manufacturer.ManufacturerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,4 +18,11 @@ public class ManufacturerController {
     public List<Manufacturer> getAllManufacturers() {
         return manufacturerService.findAll();
     }
+
+    @PostMapping(path = "/manufacturer/save", consumes = "application/json",
+            produces = "application/json")
+    public Manufacturer saveManufacturer(@RequestBody Manufacturer manufacturer) {
+        return manufacturerService.save(manufacturer);
+    }
+
 }
