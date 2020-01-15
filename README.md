@@ -146,9 +146,53 @@ With this object the `username` which is a primary key in the administrator tabl
 
 * URL `http://localhost:8080/api/phone/save`, METHOD = POST, expects a JSON body.
 
+**eg** Saving a phone at (http://localhost:8080/api/phone/save) using the JSON body below:
+
+```
+{
+	"displayType": "Super AMOLED capacitive touchscreen, 16M colors",
+	"displayResolution": "1080 x 2400 pixels",
+	"displaySize": "6.5 inches",
+	"selfieCamera": "32 MP, f/2.2",
+	"mainCamera": "48 MP, f/2.0, 12 MP, f/2.2, 5 MP, f/2.4, 5 MP, f/2.2",
+	"mname": "Samsung",
+	"name": "Samsung Galaxy A51",
+	"productionYear": "2019",
+	"technology": "GSM / HSPA / LTE",
+	"weight": "172 g (6.07 oz)",
+	"sound": "Single Speaker",
+	"os": "Android 9 (One UI)",
+	"battery": "Non-removable Li-ion 4000 mAh battery",
+	"imgSource": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg"
+}
+```
+
 #### Update a phone by id
 
 * URL `http://localhost:8080/api/phone/update/{id}`, METHOD = PUT, expects a path variable `id` and a JSON body.
+
+**e.g.** Updating a phone at (http://localhost:8080/api/phone/update/samsungGalaxyA9) using
+
+```
+{
+	"displayType": "Super AMOLED capacitive touchscreen, 16M colors",
+	"displayResolution": "1080 x 2400 pixels",
+	"displaySize": "6.5 inches",
+	"selfieCamera": "32 MP, f/2.2",
+	"mainCamera": "48 MP, f/2.0, 12 MP, f/2.2, 5 MP, f/2.4, 5 MP, f/2.2",
+	"mname": "Samsung",
+	"name": "Samsung Galaxy A10",
+	"productionYear": "2019",
+	"technology": "GSM / HSPA / LTE",
+	"weight": "172 g (6.07 oz)",
+	"sound": "Single Speaker",
+	"os": "Android 9 (One UI)",
+	"battery": "Non-removable Li-ion 4000 mAh battery",
+	"imgSource": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg"
+}
+```
+
+**As we see here the phone with the id `samsungGalaxyA9` will be updated with the JSON body provided above. The id will change due to its name**
 
 #### Delete a phone by id
 
