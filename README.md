@@ -42,7 +42,7 @@ $ git clone https://github.com/ealili/springboot-rest-api.git
 
 Second, open the project using your favorite IDE and install all the listed dependencies above and you should be able to run the application.
 
-If everything works, you should see a welcome page [here](http://127.0.0.1:8080/).
+If everything works, you should see an Index Page [here](http://127.0.0.1:8080/).
 
 ## Database
 
@@ -62,3 +62,21 @@ spring.jpa.hibernate.ddl-auto = update
 ```
 
 ## REST Endpoints
+
+### Administrator Endpoints
+
+Get an administrator by username and password 
+
+* URL (http://localhost:8080/api/administrator), METHOD = POST, expects JSON body
+
+Save an administrator 
+
+* URL (http://localhost:8080/api/administrator/save), METHOD = POST, expects JSON body
+
+Update an administrator
+
+* URL (http://localhost:8080/api/administrator/update/{username}), METHOD = PUT, expects a Path Variable `username` and a JSON body
+
+Delete an administrator
+
+* URL (http://localhost:8080/api/administrator/delete/{username}), METHOD = DELETE, expects a Path Variable `username`
