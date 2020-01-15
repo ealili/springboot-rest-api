@@ -116,6 +116,21 @@ Index Page, later this endpoint will provide all the available routes.
 
 * URL (http://localhost:8080/api/phone/delete/{id}), METHOD = DELETE, expects a path variable `id`.
 
+### Manufacturer Endpoints
+
+#### Get all manufactures
+
+* URL (http://locahost:8080/api/manufacturers), METHOD = GET.
+
+#### Save a manufacturer
+
+* URL (http://localhost:8080/api/manufacturer/save), METHOD = POST, expects a JSON body.
+
+#### Delete a manufacturer by manufacturer name
+
+* URL (http://localhost:8080/api/manufacturer/delete/{mname}), METHOD = DELETE, expects a path variable `mname`. 
+
+
 
 
 
