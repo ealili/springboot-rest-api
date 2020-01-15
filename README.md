@@ -70,13 +70,13 @@ spring.jpa.hibernate.ddl-auto = update
 
 Index Page, later this endpoint will provide all the available routes.
 
-* URL (http://localhost:8080/), METHOD = GET.
+* URL `http://localhost:8080/`, METHOD = GET.
 
 ### Administrator Endpoints
 
 #### Get an administrator by username and password 
 
-* URL (http://localhost:8080/api/administrator), METHOD = POST, expects JSON body.
+* URL `http://localhost:8080/api/administrator`, METHOD = POST, expects JSON body.
 
 e.g. Getting an administraor at (http://localhost:8080/api/administrator) using the JSON objet below:
 
@@ -89,7 +89,7 @@ e.g. Getting an administraor at (http://localhost:8080/api/administrator) using 
 
 #### Save an administrator 
 
-* URL (http://localhost:8080/api/administrator/save), METHOD = POST, expects JSON body.
+* URL `http://localhost:8080/api/administrator/save`, METHOD = POST, expects JSON body.
 
 e.g. Saving an administrator at (http://localhost:8008/api/administrator/save) using the JSON object below:
 
@@ -103,7 +103,7 @@ e.g. Saving an administrator at (http://localhost:8008/api/administrator/save) u
 
 #### Update an administrator by username
 
-* URL (http://localhost:8080/api/administrator/update/{username}), METHOD = PUT, expects a path variable `username` and a JSON body.
+* URL `http://localhost:8080/api/administrator/update/{username}`, METHOD = PUT, expects a path variable `username` and a JSON body.
 
 e.g. Updating an administrator at (http://localhost:8080/api/administrator/update/selaudin) using the JSON object below:
 
@@ -118,7 +118,7 @@ With this object the `username` which is a primary key in the administrator tabl
 
 #### Delete an administrator by username
 
-* URL (http://localhost:8080/api/administrator/delete/{username}), METHOD = DELETE, expects a path variable `username`.
+* URL `http://localhost:8080/api/administrator/delete/{username}`, METHOD = DELETE, expects a path variable `username`.
 
 e.g. Deleting an administrator with the username `selaudin` at (http://localhost:8080/api/administrator/delete/selaudin)
 
@@ -126,31 +126,31 @@ e.g. Deleting an administrator with the username `selaudin` at (http://localhost
 
 #### Get all phones
 
-* URL (http://localhost:8080/api/phones), METHOD = GET.
+* URL `http://localhost:8080/api/phones`, METHOD = GET.
 
 #### Get phones by manufacturer name
 
-* URL (http://localhost:8080/api/phones/{mname}), METHOD = GET, expects a path variable `mname`.
+* URL `http://localhost:8080/api/phones/{mname}`, METHOD = GET, expects a path variable `mname`.
 
 e.g. Getting phones of the manufacturer called `Samsung` at (http://localhost:8080/api/phones/Samsung)
 
 #### Get a phone by id
 
-* URL (http://localhost:8080/api/phone/{id}), METHOD = GET, expects a path variable `id`.
+* URL `http://localhost:8080/api/phone/{id}`, METHOD = GET, expects a path variable `id`.
 
 e.g. Getting a phone with the id `samsungGalaxyNote10` at (http:localhost:8080/api/phone/samsungGalaxyNote10)
 
 #### Save a phone
 
-* URL (http://localhost:8080/api/phone/save), METHOD = POST, expects a JSON body.
+* URL `http://localhost:8080/api/phone/save`, METHOD = POST, expects a JSON body.
 
 #### Update a phone by id
 
-* URL (http://localhost:8080/api/phone/update/{id}), METHOD = PUT, expects a path variable `id` and a JSON body.
+* URL `http://localhost:8080/api/phone/update/{id}`, METHOD = PUT, expects a path variable `id` and a JSON body.
 
 #### Delete a phone by id
 
-* URL (http://localhost:8080/api/phone/delete/{id}), METHOD = DELETE, expects a path variable `id`.
+* URL `http://localhost:8080/api/phone/delete/{id}`, METHOD = DELETE, expects a path variable `id`.
 
 e.g. Deleting a phone with the id `samsungGalaxyNote10` at (http://localhost:8080/api/phone/delete/samsungGalaxyNote10)
 
@@ -158,11 +158,11 @@ e.g. Deleting a phone with the id `samsungGalaxyNote10` at (http://localhost:808
 
 #### Get all manufactures
 
-* URL (http://locahost:8080/api/manufacturers), METHOD = GET.
+* URL `http://locahost:8080/api/manufacturers`, METHOD = GET.
 
 #### Save a manufacturer
 
-* URL (http://localhost:8080/api/manufacturer/save), METHOD = POST, expects a JSON body.
+* URL `http://localhost:8080/api/manufacturer/save`, METHOD = POST, expects a JSON body.
 
 e.g. Saving a manufacturer at (https://localhost:8080/api/manufacturer/save) using the JSON object below:
 
@@ -175,7 +175,7 @@ e.g. Saving a manufacturer at (https://localhost:8080/api/manufacturer/save) usi
 
 #### Delete a manufacturer by manufacturer name
 
-* URL (http://localhost:8080/api/manufacturer/delete/{mname}), METHOD = DELETE, expects a path variable `mname`.
+* URL `http://localhost:8080/api/manufacturer/delete/{mname}`, METHOD = DELETE, expects a path variable `mname`.
 
 e.g. Deleting a manufacturer with the name `Samsung` (http://localhost:8080/api/manufacturer/delete/Samsung)
 
