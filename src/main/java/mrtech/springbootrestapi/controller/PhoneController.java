@@ -1,15 +1,15 @@
 package mrtech.springbootrestapi.controller;
 
+import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.pojo.Phone;
-import mrtech.springbootrestapi.service.PhoneService;
+import mrtech.springbootrestapi.pojo.PhoneInput;
+import mrtech.springbootrestapi.service.phone.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -35,5 +35,23 @@ public class PhoneController {
     @GetMapping("/phone/{id}")
     public Phone getPhoneById(@PathVariable String id) {
         return phoneService.findPhoneById(id);
+    }
+
+    @PostMapping(path = "/phone/save", consumes = "application/json", produces = "application/json")
+    public Phone savePhone(@RequestBody PhoneInput phoneInput) {
+        return phoneService.save(phoneInput);
+    }
+
+    @PutMapping("/phone/update/{id}")
+    public Phone updatePhone(@PathVariable String id, @RequestBody PhoneInput phoneInput) {
+        return phoneService.update(id, phoneInput);
+    }
+
+    @DeleteMapping("/phone/delete/{id}")
+    public ResponseEntity<Void> deletePhone(@PathVariable String id) {
+        if (phoneService.delete(id)) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }

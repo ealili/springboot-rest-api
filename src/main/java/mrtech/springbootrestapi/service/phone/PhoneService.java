@@ -1,11 +1,10 @@
-package mrtech.springbootrestapi.service;
+package mrtech.springbootrestapi.service.phone;
 
-import mrtech.springbootrestapi.pojo.Manufacturer;
 import mrtech.springbootrestapi.pojo.Phone;
+import mrtech.springbootrestapi.pojo.PhoneInput;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public interface PhoneService {
@@ -14,5 +13,11 @@ public interface PhoneService {
     List<Phone> findAllByManufacturer_Mname(String mname);
 
     Phone findPhoneById(String id);
+
+    Phone save(PhoneInput phoneInput);
+
+    Phone update(String id, PhoneInput phoneInput);
+
+    boolean delete(String id);
 }
 

@@ -1,22 +1,9 @@
 package mrtech.springbootrestapi.pojo;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+public class PhoneInput {
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "phone")
-public class Phone {
-
-    @Id
-    private String id;
-
-    @ManyToOne
-    @JoinColumn(name = "mname")
-    @JsonIgnoreProperties("phones")
-    private Manufacturer manufacturer;
-
+    private String mname;
     private String battery;
     private String displayResolution;
     private String displaySize;
@@ -31,14 +18,14 @@ public class Phone {
     private String technology;
     private String os;
 
-    public Phone() {
+    public PhoneInput() {
     }
 
-    public Phone(String id, Manufacturer manufacturer, String battery, String displayResolution, String displaySize,
-                 String displayType, String imgSource, String selfieCamera, String mainCamera, String name,
-                 String weight, Integer productionYear, String sound, String technology, String os) {
-        this.id = id;
-        this.manufacturer = manufacturer;
+    public PhoneInput(String mname, String battery, String displayResolution, String displaySize, String displayType,
+                      String imgSource, String selfieCamera, String mainCamera, String name, String weight,
+                      Integer productionYear, String sound, String technology, String os)
+    {
+        this.mname = mname;
         this.battery = battery;
         this.displayResolution = displayResolution;
         this.displaySize = displaySize;
@@ -54,20 +41,12 @@ public class Phone {
         this.os = os;
     }
 
-    public String getId() {
-        return id;
+    public String getMname(){
+        return mname;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Manufacturer getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(Manufacturer manufacturer) {
-        this.manufacturer = manufacturer;
+    public void setMname(String mname){
+        this.mname = mname;
     }
 
     public String getBattery() {

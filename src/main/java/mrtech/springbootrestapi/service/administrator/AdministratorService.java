@@ -1,4 +1,4 @@
-package mrtech.springbootrestapi.service;
+package mrtech.springbootrestapi.service.administrator;
 
 import mrtech.springbootrestapi.pojo.Administrator;
 
@@ -8,4 +8,8 @@ public interface AdministratorService {
     Optional<Administrator> findAdministratorByUsernameAndPassword(Administrator administrator);
 
     Administrator save(Administrator administrator);
+
+    boolean delete(String username);
+
+    Administrator update(String username, Administrator administrator);
 }
