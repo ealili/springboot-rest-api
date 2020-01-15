@@ -78,17 +78,49 @@ Index Page, later this endpoint will provide all the available routes.
 
 * URL (http://localhost:8080/api/administrator), METHOD = POST, expects JSON body.
 
+e.g. Getting an administraor at (http://localhost:8080/api/administrator) using the JSON objet below:
+
+```
+{
+  "username": "selaudin",
+  "password"" "selaudin123"
+}
+```
+
 #### Save an administrator 
 
 * URL (http://localhost:8080/api/administrator/save), METHOD = POST, expects JSON body.
+
+e.g. Saving an administrator at (http://localhost:8008/api/administrator/save) using the JSON object below:
+
+```
+{
+  "username": "agni",
+  "name": "Agni Ramadani",
+  "password": "agni123"
+}
+```
 
 #### Update an administrator by username
 
 * URL (http://localhost:8080/api/administrator/update/{username}), METHOD = PUT, expects a path variable `username` and a JSON body.
 
+e.g. Updating an administrator at (http://localhost:8080/api/administrator/update/selaudin) using the JSON object below:
+
+```
+{
+  "username": "sela",
+  "name": "Selaudin",
+  "password": "sela123"
+```
+
+With this object the `username` which is a primary key in the administrator table will also get updated.
+
 #### Delete an administrator by username
 
 * URL (http://localhost:8080/api/administrator/delete/{username}), METHOD = DELETE, expects a path variable `username`.
+
+e.g. Deleting an administrator with the username `selaudin` at (http://localhost:8080/api/administrator/delete/selaudin)
 
 ### Phone Endpoints
 
@@ -100,9 +132,13 @@ Index Page, later this endpoint will provide all the available routes.
 
 * URL (http://localhost:8080/api/phones/{mname}), METHOD = GET, expects a path variable `mname`.
 
+e.g. Getting phones of the manufacturer called `Samsung` at (http://localhost:8080/api/phones/Samsung)
+
 #### Get a phone by id
 
 * URL (http://localhost:8080/api/phone/{id}), METHOD = GET, expects a path variable `id`.
+
+e.g. Getting a phone with the id `samsungGalaxyNote10` at (http:localhost:8080/api/phone/samsungGalaxyNote10)
 
 #### Save a phone
 
@@ -116,6 +152,8 @@ Index Page, later this endpoint will provide all the available routes.
 
 * URL (http://localhost:8080/api/phone/delete/{id}), METHOD = DELETE, expects a path variable `id`.
 
+e.g. Deleting a phone with the id `samsungGalaxyNote10` at (http://localhost:8080/api/phone/delete/samsungGalaxyNote10)
+
 ### Manufacturer Endpoints
 
 #### Get all manufactures
@@ -126,9 +164,20 @@ Index Page, later this endpoint will provide all the available routes.
 
 * URL (http://localhost:8080/api/manufacturer/save), METHOD = POST, expects a JSON body.
 
+e.g. Saving a manufacturer at (https://localhost:8080/api/manufacturer/save) using the JSON object below:
+
+```
+{
+  "mname": "OnePlus,
+  "headquarters": "China"
+}
+```
+
 #### Delete a manufacturer by manufacturer name
 
-* URL (http://localhost:8080/api/manufacturer/delete/{mname}), METHOD = DELETE, expects a path variable `mname`. 
+* URL (http://localhost:8080/api/manufacturer/delete/{mname}), METHOD = DELETE, expects a path variable `mname`.
+
+e.g. Deleting a manufacturer with the name `Samsung` (http://localhost:8080/api/manufacturer/delete/Samsung)
 
 
 
