@@ -18,6 +18,7 @@ You will need:
 * [Maven](https://maven.apache.org/) as your build tool
 * Your favorite IDE
 * JDK 1.8+
+* [MySQL](https://www.mysql.com/)
 
 ## Dependencies
 
@@ -44,5 +45,20 @@ Second, open the project using your favorite IDE and install all the listed depe
 If everything works, you should see a welcome page [here](http://127.0.0.1:8080/).
 
 ## Database
+
+1. Create a MySQL database using the `mrtech.sql` script provided in the root folder.
+1. Add credentials to `/src/main/resources/application.properties`
+
+The default ones are:
+
+``` 
+spring.datasource.url=jdbc:mysql://localhost:3306/mrtech
+spring.datasource.username=root
+spring.datasource.password=
+spring.jpa.database-platform = org.hibernate.dialect.MySQL5Dialect
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+spring.jpa.hibernate.ddl-auto = update
+```
 
 ## REST Endpoints
