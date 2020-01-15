@@ -47,7 +47,7 @@ If everything works, you should see an Index Page [here](http://127.0.0.1:8080/)
 ## Database
 
 1. Create a MySQL database using the `mrtech.sql` script provided in the root folder.
-1. Add credentials to `/src/main/resources/application.properties`
+1. Add credentials to `/src/main/resources/application.properties`.
 
 The default ones are:
 
@@ -63,20 +63,56 @@ spring.jpa.hibernate.ddl-auto = update
 
 ## REST Endpoints
 
+### Index Endpoint
+
+Index Page, later this endpoint will provide all the available routes.
+
+* URL (http://localhost:8080/), METHOD = GET.
+
 ### Administrator Endpoints
 
 Get an administrator by username and password 
 
-* URL (http://localhost:8080/api/administrator), METHOD = POST, expects JSON body
+* URL (http://localhost:8080/api/administrator), METHOD = POST, expects JSON body.
 
 Save an administrator 
 
-* URL (http://localhost:8080/api/administrator/save), METHOD = POST, expects JSON body
+* URL (http://localhost:8080/api/administrator/save), METHOD = POST, expects JSON body.
 
-Update an administrator
+Update an administrator by username
 
-* URL (http://localhost:8080/api/administrator/update/{username}), METHOD = PUT, expects a Path Variable `username` and a JSON body
+* URL (http://localhost:8080/api/administrator/update/{username}), METHOD = PUT, expects a path variable `username` and a JSON body.
 
-Delete an administrator
+Delete an administrator by username
 
-* URL (http://localhost:8080/api/administrator/delete/{username}), METHOD = DELETE, expects a Path Variable `username`
+* URL (http://localhost:8080/api/administrator/delete/{username}), METHOD = DELETE, expects a path variable `username`.
+
+### Phone Endpoints
+
+Get all phones
+
+* URL (http://localhost:8080/api/phones), METHOD = GET.
+
+Get phones by manufacturer name
+
+* URL (http://localhost:8080/api/phones/{mname}), METHOD = GET, expects a path variable `mname`.
+
+Get a phone by id
+
+* URL (http://localhost:8080/api/phone/{id}), METHOD = GET, expects a path variable `id`.
+
+Save a phone
+
+* URL (http://localhost:8080/api/phone/save), METHOD = POST, expects a JSON body.
+
+Update a phone by id
+
+* URL (http://localhost:8080/api/phone/update/{id}), METHOD = PUT, expects a path variable `id` and a JSON body.
+
+Delete a phone by id
+
+* URL (http://localhost:8080/api/phone/delete/{id}), METHOD = DELETE, expects a path variable `id`.
+
+
+
+
