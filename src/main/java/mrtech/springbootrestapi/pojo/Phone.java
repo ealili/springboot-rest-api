@@ -29,8 +29,26 @@ public class Phone {
     public Phone() {
     }
 
-
-
+    public Phone(String id, Manufacturer manufacturer, String battery, String displayResolution, String displaySize,
+                 String displayType, String imgSource, String selfieCamera, String mainCamera, String name,
+                 String weight, Integer productionYear, String sound, String technology, String os)
+    {
+        this.id = id;
+        this.manufacturer = manufacturer;
+        this.battery = battery;
+        this.displayResolution = displayResolution;
+        this.displaySize = displaySize;
+        this.displayType = displayType;
+        this.imgSource = imgSource;
+        this.selfieCamera = selfieCamera;
+        this.mainCamera = mainCamera;
+        this.name = name;
+        this.weight = weight;
+        this.productionYear = productionYear;
+        this.sound = sound;
+        this.technology = technology;
+        this.os = os;
+    }
 
     public String getId() {
         return id;
