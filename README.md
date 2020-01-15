@@ -78,7 +78,7 @@ Index Page, later this endpoint will provide all the available routes.
 
 * URL `http://localhost:8080/api/administrator`, METHOD = POST, expects JSON body.
 
-e.g. Getting an administraor at (http://localhost:8080/api/administrator) using the JSON objet below:
+**e.g.** Getting an administraor at (http://localhost:8080/api/administrator) using the JSON objet below:
 
 ```
 {
@@ -91,7 +91,7 @@ e.g. Getting an administraor at (http://localhost:8080/api/administrator) using 
 
 * URL `http://localhost:8080/api/administrator/save`, METHOD = POST, expects JSON body.
 
-e.g. Saving an administrator at (http://localhost:8008/api/administrator/save) using the JSON object below:
+**e.g.** Saving an administrator at (http://localhost:8008/api/administrator/save) using the JSON object below:
 
 ```
 {
@@ -105,7 +105,7 @@ e.g. Saving an administrator at (http://localhost:8008/api/administrator/save) u
 
 * URL `http://localhost:8080/api/administrator/update/{username}`, METHOD = PUT, expects a path variable `username` and a JSON body.
 
-e.g. Updating an administrator at (http://localhost:8080/api/administrator/update/selaudin) using the JSON object below:
+**e.g.** Updating an administrator at (http://localhost:8080/api/administrator/update/selaudin) using the JSON object below:
 
 ```
 {
@@ -120,7 +120,7 @@ With this object the `username` which is a primary key in the administrator tabl
 
 * URL `http://localhost:8080/api/administrator/delete/{username}`, METHOD = DELETE, expects a path variable `username`.
 
-e.g. Deleting an administrator with the username `selaudin` at (http://localhost:8080/api/administrator/delete/selaudin)
+**e.g.** Deleting an administrator with the username `selaudin` at (http://localhost:8080/api/administrator/delete/selaudin)
 
 ### Phone Endpoints
 
@@ -132,13 +132,13 @@ e.g. Deleting an administrator with the username `selaudin` at (http://localhost
 
 * URL `http://localhost:8080/api/phones/{mname}`, METHOD = GET, expects a path variable `mname`.
 
-e.g. Getting phones of the manufacturer called `Samsung` at (http://localhost:8080/api/phones/Samsung)
+**e.g.** Getting phones of the manufacturer called `Samsung` at (http://localhost:8080/api/phones/Samsung)
 
 #### Get a phone by id
 
 * URL `http://localhost:8080/api/phone/{id}`, METHOD = GET, expects a path variable `id`.
 
-e.g. Getting a phone with the id `samsungGalaxyNote10` at (http:localhost:8080/api/phone/samsungGalaxyNote10)
+**e.g.** Getting a phone with the id `samsungGalaxyNote10` at (http:localhost:8080/api/phone/samsungGalaxyNote10)
 
 #### Save a phone
 
@@ -152,7 +152,7 @@ e.g. Getting a phone with the id `samsungGalaxyNote10` at (http:localhost:8080/a
 
 * URL `http://localhost:8080/api/phone/delete/{id}`, METHOD = DELETE, expects a path variable `id`.
 
-e.g. Deleting a phone with the id `samsungGalaxyNote10` at (http://localhost:8080/api/phone/delete/samsungGalaxyNote10)
+**e.g.** Deleting a phone with the id `samsungGalaxyNote10` at (http://localhost:8080/api/phone/delete/samsungGalaxyNote10)
 
 ### Manufacturer Endpoints
 
@@ -164,7 +164,7 @@ e.g. Deleting a phone with the id `samsungGalaxyNote10` at (http://localhost:808
 
 * URL `http://localhost:8080/api/manufacturer/save`, METHOD = POST, expects a JSON body.
 
-e.g. Saving a manufacturer at (https://localhost:8080/api/manufacturer/save) using the JSON object below:
+**e.g.** Saving a manufacturer at (https://localhost:8080/api/manufacturer/save) using the JSON object below:
 
 ```
 {
@@ -177,7 +177,7 @@ e.g. Saving a manufacturer at (https://localhost:8080/api/manufacturer/save) usi
 
 * URL `http://localhost:8080/api/manufacturer/delete/{mname}`, METHOD = DELETE, expects a path variable `mname`.
 
-e.g. Deleting a manufacturer with the name `Samsung` (http://localhost:8080/api/manufacturer/delete/Samsung)
+**e.g.** Deleting a manufacturer with the name `Samsung` (http://localhost:8080/api/manufacturer/delete/Samsung)
 
 
 
