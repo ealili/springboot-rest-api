@@ -1,15 +1,20 @@
 package mrtech.springbootrestapi.pojo;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "phone")
 public class Phone {
+
     @Id
     private String id;
+
     @ManyToOne
     @JoinColumn(name = "mname")
+    @JsonIgnoreProperties("phones")
     private Manufacturer manufacturer;
 
     private String battery;
@@ -31,8 +36,7 @@ public class Phone {
 
     public Phone(String id, Manufacturer manufacturer, String battery, String displayResolution, String displaySize,
                  String displayType, String imgSource, String selfieCamera, String mainCamera, String name,
-                 String weight, Integer productionYear, String sound, String technology, String os)
-    {
+                 String weight, Integer productionYear, String sound, String technology, String os) {
         this.id = id;
         this.manufacturer = manufacturer;
         this.battery = battery;
