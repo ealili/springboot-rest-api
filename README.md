@@ -83,7 +83,7 @@ Index Page, later this endpoint will provide all the available routes.
 ```
 {
   "username": "selaudin",
-  "password"" "selaudin123"
+  "password": "selaudin123"
 }
 ```
 
@@ -138,7 +138,7 @@ With this object the `username` which is a primary key in the administrator tabl
 
 * URL `http://localhost:8080/api/phone/{id}`, METHOD = GET, expects a path variable `id`.
 
-**e.g.** Getting a phone with the id `samsungGalaxyNote10` at (http:localhost:8080/api/phone/samsungGalaxyNote10)
+**e.g.** Getting a phone with the id `samsungGalaxyNote10` at (http://localhost:8080/api/phone/samsungGalaxyNote10)
 
 #### Save a phone
 
