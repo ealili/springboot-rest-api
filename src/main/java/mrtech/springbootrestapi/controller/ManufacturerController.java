@@ -1,5 +1,6 @@
 package mrtech.springbootrestapi.controller;
 
+import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.pojo.Manufacturer;
 import mrtech.springbootrestapi.service.manufacturer.ManufacturerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,12 @@ public class ManufacturerController {
             produces = "application/json")
     public Manufacturer saveManufacturer(@RequestBody Manufacturer manufacturer) {
         return manufacturerService.save(manufacturer);
+    }
+
+    @PutMapping("/manufacturer/update/{mname}")
+    public Manufacturer updateManufacturer(@PathVariable String mname,
+                                             @RequestBody Manufacturer manufacturer) {
+        return manufacturerService.update(mname, manufacturer);
     }
 
     @DeleteMapping("/manufacturer/delete/{mname}")

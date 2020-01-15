@@ -11,5 +11,7 @@ public interface ManufacturerService {
 
     Manufacturer save(Manufacturer manufacturer);
 
+    Manufacturer update(String id, Manufacturer manufacturer);
+
     boolean delete(String mname);
 }

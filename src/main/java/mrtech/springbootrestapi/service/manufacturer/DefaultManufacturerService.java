@@ -1,5 +1,6 @@
 package mrtech.springbootrestapi.service.manufacturer;
 
+import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.pojo.Manufacturer;
 import mrtech.springbootrestapi.repository.ManufacturerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,19 @@ public class DefaultManufacturerService implements ManufacturerService {
             return null;
         }
 
+        return manufacturerRepository.save(manufacturer);
+    }
+
+    @Override
+    public Manufacturer update(String mname, Manufacturer manufacturer) {
+        Manufacturer manufacturerToUpate =
+                manufacturerRepository.findManufacturerByMname(mname);
+
+        if (manufacturerToUpate == null) {
+            return null;
+        }
+
+        manufacturerRepository.delete(manufacturerToUpate);
         return manufacturerRepository.save(manufacturer);
     }
 
