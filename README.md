@@ -35,15 +35,15 @@ You will need:
 
 ## Getting Started
 
-1. Clone the project:
+First, clone the project:
 
 ```bash
 $ git clone https://github.com/ealili/springboot-rest-api.git
 ```
 
-1. Configure the [database](#database).
+Second, configure the [database](#database).
 
-1. Open the project using your favorite IDE and install all the listed dependencies above and you should be able to run the project.
+Finally, open the project using your favorite IDE and install all the listed dependencies above and you should be able to run the project.
 
 If everything works, you should see an Index Page [here](http://127.0.0.1:8080/).
 
