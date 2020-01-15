@@ -7,8 +7,8 @@ This project contains the api for Mrtechspecs
 
 1. [Tools](#tools)
 1. [Dependencies](#dependencies)
-1. [Getting Started](#getting-started)
 1. [Database](#database)
+1. [Getting Started](#getting-started)
 1. [REST Endpoints](#rest-endpoints)
 
 ## Tools 
@@ -32,18 +32,6 @@ You will need:
 * [Spring Boot Test Starter](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test)
 * [Spring Boot Maven Plugin](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin)
 
-## Getting Started
-
-First, clone the project:
-
-```bash
-$ git clone https://github.com/ealili/springboot-rest-api.git
-```
-
-Second, open the project using your favorite IDE and install all the listed dependencies above and you should be able to run the application.
-
-If everything works, you should see an Index Page [here](http://127.0.0.1:8080/).
-
 ## Database
 
 1. Create a MySQL database using the `mrtech.sql` script provided in the root folder.
@@ -60,6 +48,18 @@ spring.jpa.generate-ddl=true
 spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 spring.jpa.hibernate.ddl-auto = update
 ```
+
+## Getting Started
+
+First, clone the project:
+
+```bash
+$ git clone https://github.com/ealili/springboot-rest-api.git
+```
+
+Second, open the project using your favorite IDE and install all the listed dependencies above and you should be able to run the application.
+
+If everything works, you should see an Index Page [here](http://127.0.0.1:8080/).
 
 ## REST Endpoints
 
