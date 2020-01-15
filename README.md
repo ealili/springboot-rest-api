@@ -1,6 +1,6 @@
 # Mrtechspecs REST API
 
-This project contains the api for Mrtechspecs
+This project contains the api for Mrtechspecs website, where users can find the latest specifications about the latest phones. 
 
 
 ## Table of Contents
@@ -43,10 +43,6 @@ $ git clone https://github.com/ealili/springboot-rest-api.git
 
 Second, configure the [database](#database).
 
-Finally, open the project using your favorite IDE and install all the listed dependencies above and you should be able to run the project.
-
-If everything works, you should see an Index Page [here](http://127.0.0.1:8080/).
-
 ## Database
 
 1. Create a MySQL database using the `mrtech.sql` script provided in the root folder.
@@ -63,6 +59,10 @@ spring.jpa.generate-ddl=true
 spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 spring.jpa.hibernate.ddl-auto = update
 ```
+
+Finally, open the project using your favorite IDE and install all the listed dependencies above and you should be able to run the project.
+
+If everything works, you should see an Index Page [here](http://127.0.0.1:8080/).
 
 ## REST Endpoints
 
@@ -86,6 +86,8 @@ Index Page, later this endpoint will provide all the available routes.
   "password": "selaudin123"
 }
 ```
+
+**At this point there is no authentication provided for the administrator.**
 
 #### Save an administrator 
 
