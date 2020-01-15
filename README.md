@@ -71,45 +71,45 @@ Index Page, later this endpoint will provide all the available routes.
 
 ### Administrator Endpoints
 
-Get an administrator by username and password 
+#### Get an administrator by username and password 
 
 * URL (http://localhost:8080/api/administrator), METHOD = POST, expects JSON body.
 
-Save an administrator 
+#### Save an administrator 
 
 * URL (http://localhost:8080/api/administrator/save), METHOD = POST, expects JSON body.
 
-Update an administrator by username
+#### Update an administrator by username
 
 * URL (http://localhost:8080/api/administrator/update/{username}), METHOD = PUT, expects a path variable `username` and a JSON body.
 
-Delete an administrator by username
+#### Delete an administrator by username
 
 * URL (http://localhost:8080/api/administrator/delete/{username}), METHOD = DELETE, expects a path variable `username`.
 
 ### Phone Endpoints
 
-Get all phones
+#### Get all phones
 
 * URL (http://localhost:8080/api/phones), METHOD = GET.
 
-Get phones by manufacturer name
+#### Get phones by manufacturer name
 
 * URL (http://localhost:8080/api/phones/{mname}), METHOD = GET, expects a path variable `mname`.
 
-Get a phone by id
+#### Get a phone by id
 
 * URL (http://localhost:8080/api/phone/{id}), METHOD = GET, expects a path variable `id`.
 
-Save a phone
+#### Save a phone
 
 * URL (http://localhost:8080/api/phone/save), METHOD = POST, expects a JSON body.
 
-Update a phone by id
+#### Update a phone by id
 
 * URL (http://localhost:8080/api/phone/update/{id}), METHOD = PUT, expects a path variable `id` and a JSON body.
 
-Delete a phone by id
+#### Delete a phone by id
 
 * URL (http://localhost:8080/api/phone/delete/{id}), METHOD = DELETE, expects a path variable `id`.
 
