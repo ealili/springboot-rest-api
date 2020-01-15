@@ -1,6 +1,6 @@
 # Mrtechspecs REST API
 
-This project contains the api for Mrtechspecs
+This project contains the api for Mrtechspecs website, where users can find the latest specifications about the latest phones. 
 
 
 ## Table of Contents
@@ -86,6 +86,8 @@ Index Page, later this endpoint will provide all the available routes.
   "password": "selaudin123"
 }
 ```
+
+** At this point there is no authentication provided for the administrator. **
 
 #### Save an administrator 
 
