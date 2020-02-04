@@ -1,5 +1,8 @@
 package mrtech.springbootrestapi;
 
+import mrtech.springbootrestapi.pojo.Manufacturer;
+import mrtech.springbootrestapi.pojo.Phone;
+import mrtech.springbootrestapi.pojo.PhoneInput;
 import mrtech.springbootrestapi.service.phone.PhoneService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,4 +33,19 @@ public class DefaultPhoneServiceTests {
         String id = "googlePixel4XL";
         assertNotNull(phoneService.findPhoneById(id));
     }
+
+    @Test
+    public void testPhoneSaveService() {
+        Manufacturer manufacturer = new Manufacturer();
+        PhoneInput phone = new PhoneInput("testMName","testBattery", "testResolution", "testDisplaySize", "testDisplayType", "testImgSource", "testSelfieCamera", "testMainCamera", "testName", "testWeight", 2010, "testSound", "testTechonlogy", "testOs");
+        assertNull(phoneService.save(phone));
+    }
+
+    @Test
+    public void testPhoneDeleteService() {
+        Manufacturer manufacturer = new Manufacturer();
+        Phone phone = new Phone(null,manufacturer,"testBattery", "testResolution", "testDisplaySize", "testDisplayType", "testImgSource", "testSelfieCamera", "testMainCamera", "testName", "testWeight", 2010, "testSound", "testTechonlogy", "testOs");
+        assertNotNull(phoneService.delete(phone.getId()));
+    }
+
 }
