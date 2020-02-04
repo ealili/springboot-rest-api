@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping(value = "/api", method = {RequestMethod.PUT,RequestMethod.DELETE})
 public class PhoneController {
 
     @Autowired
