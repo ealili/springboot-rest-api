@@ -24,4 +24,10 @@ public class DefaultPhoneServiceTests {
     public void testFindAllService() {
         assertNotNull(phoneService.findAll());
     }
+
+    @Test
+    public void testFindPhoneByIdService() {
+        String id = "googlePixel4XL";
+        assertNotNull(phoneService.findPhoneById(id));
+    }
 }
