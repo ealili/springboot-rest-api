@@ -2,10 +2,8 @@ package mrtech.springbootrestapi;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import mrtech.springbootrestapi.controller.AdministratorController;
-import mrtech.springbootrestapi.controller.PhoneController;
 import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.service.administrator.AdministratorService;
-import mrtech.springbootrestapi.service.phone.PhoneService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
@@ -37,9 +34,15 @@ public class AdministratorControllerTests {
     @Test
     public void postAdministratorTest() throws Exception {
         Administrator administrator = new Administrator("testUsername","testName","testPassword");
-        mvc.perform(post("/api/administrator", administrator).contentType(MediaType.APPLICATION_JSON).content(toJson(administrator))).andExpect(status().isOk());
+        mvc.perform(post("/api/administrator/save", administrator).contentType(MediaType.APPLICATION_JSON).content(toJson(administrator))).andExpect(status().isOk());
     }
 
+    @Test
+    public void putAdministratorTest() throws Exception {
+        Administrator administrator = new Administrator("testUsername","testName","testPassword");
+        mvc.perform(put("/api/administrator/update/{username}",administrator.getUsername(), administrator).contentType(MediaType.APPLICATION_JSON).content(toJson(administrator))).andExpect(status().isOk());
+
+    }
     private String toJson(final Object obj) {
         try {
             return new ObjectMapper().writeValueAsString(obj);
