@@ -31,6 +31,11 @@ public class ManufacturerControllerTests {
         mvc.perform(get("/api/manufacturers")).andExpect(status().isOk());
     }
 
+    @Test
+    public void postManufacturerTest() throws Exception {
+        Manufacturer manufacturer = new Manufacturer("testMName","testHeadQ");
+        mvc.perform(post("/api/manufacturer/save",manufacturer).contentType(MediaType.APPLICATION_JSON).content(toJson(manufacturer))).andExpect(status().isOk());
+    }
 
 
     private String toJson(final Object obj) {
