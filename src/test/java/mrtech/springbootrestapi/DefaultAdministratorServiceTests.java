@@ -20,7 +20,18 @@ public class DefaultAdministratorServiceTests {
     @Test
     public void testSaveAdministratorService() {
         Administrator administrator = new Administrator("testName","testUsername","testPassword");
-        assertNull(administratorService.save(administrator));
+        assertNotNull(administratorService.save(administrator));
     }
 
+    @Test
+    public void testDeleteAdministratorService() {
+        Administrator administrator = new Administrator("testName","testUsername","testPassword");
+        assertNotNull(administratorService.delete(administrator.getUsername()));
+    }
+
+    @Test
+    public void testFindAdministratorByUsernameAndPasswordService() {
+        Administrator administrator = new Administrator("testName","testUsername","testPassword");
+
+        assertNotNull(administratorService.findAdministratorByUsernameAndPassword(administrator));}
 }
