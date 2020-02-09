@@ -28,7 +28,7 @@ public class ManufacturerController {
         return manufacturerService.save(manufacturer);
     }
 
-    @DeleteMapping("/manufacturer/delete/{mname}")
+    @GetMapping("/manufacturer/delete/{mname}")
     public ResponseEntity<Void> deleteAdministrator(@PathVariable String mname) {
         if (manufacturerService.delete(mname)) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
