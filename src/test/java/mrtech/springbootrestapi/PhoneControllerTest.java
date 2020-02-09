@@ -43,14 +43,6 @@ public class PhoneControllerTest {
         mvc.perform(post("/api/phone/save").contentType(MediaType.APPLICATION_JSON).content(toJson(phone))).andExpect(status().isOk());
     }
 
-    @Test
-    public void putPhoneTest() throws Exception {
-        Manufacturer manufacturer = new Manufacturer();
-        PhoneInput phoneInput = new PhoneInput("testMName","testBattery", "testResolution", "testDisplaySize", "testDisplayType", "testImgSource", "testSelfieCamera", "testMainCamera", "testName", "testWeight", 2010, "testSound", "testTechonlogy", "testOs");
-        Phone phone = new Phone(null, manufacturer, "testBattery", "testResolution", "testDisplaySize", "testDisplayType", "testImgSource", "testSelfieCamera", "testMainCamera", "testName", "testWeight", 2010, "testSound", "testTechonlogy", "testOs");
-        mvc.perform(put("/api/phone/update/{id}", phone.getId() , phoneInput).contentType(MediaType.APPLICATION_JSON).content(toJson(phoneInput))).andExpect(status().isOk());
-    }
-
     private String toJson(final Object obj) {
         try {
             return new ObjectMapper().writeValueAsString(obj);

@@ -27,22 +27,16 @@ public class AdministratorControllerTests {
 
     @Test
     public void getAdministratorTest() throws Exception {
-        Administrator administrator = new Administrator("testUsername","testName","testPassword");
+        Administrator administrator = new Administrator("testUsername", "testName", "testPassword");
         mvc.perform(post("/api/administrator", administrator).contentType(MediaType.APPLICATION_JSON).content(toJson(administrator))).andExpect(status().isOk());
     }
 
     @Test
     public void postAdministratorTest() throws Exception {
-        Administrator administrator = new Administrator("testUsername","testName","testPassword");
+        Administrator administrator = new Administrator("testUsername", "testName", "testPassword");
         mvc.perform(post("/api/administrator/save", administrator).contentType(MediaType.APPLICATION_JSON).content(toJson(administrator))).andExpect(status().isOk());
     }
 
-    @Test
-    public void putAdministratorTest() throws Exception {
-        Administrator administrator = new Administrator("testUsername","testName","testPassword");
-        mvc.perform(put("/api/administrator/update/{username}",administrator.getUsername(), administrator).contentType(MediaType.APPLICATION_JSON).content(toJson(administrator))).andExpect(status().isOk());
-
-    }
     private String toJson(final Object obj) {
         try {
             return new ObjectMapper().writeValueAsString(obj);
