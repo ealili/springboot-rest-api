@@ -1,6 +1,5 @@
 package mrtech.springbootrestapi.service.phone;
 
-import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.pojo.Manufacturer;
 import mrtech.springbootrestapi.pojo.Phone;
 import mrtech.springbootrestapi.pojo.PhoneInput;
