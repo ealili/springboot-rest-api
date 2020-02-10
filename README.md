@@ -78,7 +78,7 @@ Index Page, later this endpoint will provide all the available routes.
 
 * URL `http://localhost:8080/api/administrator`, METHOD = POST, expects JSON body.
 
-**e.g.** Getting an administraor at (http://localhost:8080/api/administrator) using the JSON objet below:
+**e.g.** Getting an administrator at (http://localhost:8080/api/administrator) using the JSON objet below:
 
 ```
 {
@@ -93,7 +93,7 @@ Index Page, later this endpoint will provide all the available routes.
 
 * URL `http://localhost:8080/api/administrator/save`, METHOD = POST, expects JSON body.
 
-**e.g.** Saving an administrator at (http://localhost:8008/api/administrator/save) using the JSON object below:
+**e.g.** Saving an administrator at (http://localhost:8080/api/administrator/save) using the JSON object below:
 
 ```
 {
@@ -105,7 +105,7 @@ Index Page, later this endpoint will provide all the available routes.
 
 #### Update an administrator by username
 
-* URL `http://localhost:8080/api/administrator/update/{username}`, METHOD = PUT, expects a path variable `username` and a JSON body.
+* URL `http://localhost:8080/api/administrator/update/{username}`, METHOD = POST, expects a path variable `username` and a JSON body.
 
 **e.g.** Updating an administrator at (http://localhost:8080/api/administrator/update/selaudin) using the JSON object below:
 
@@ -120,7 +120,7 @@ With this object the `username` which is a primary key in the administrator tabl
 
 #### Delete an administrator by username
 
-* URL `http://localhost:8080/api/administrator/delete/{username}`, METHOD = DELETE, expects a path variable `username`.
+* URL `http://localhost:8080/api/administrator/delete/{username}`, METHOD = GET, expects a path variable `username`.
 
 **e.g.** Deleting an administrator with the username `selaudin` at (http://localhost:8080/api/administrator/delete/selaudin)
 
@@ -169,7 +169,7 @@ With this object the `username` which is a primary key in the administrator tabl
 
 #### Update a phone by id
 
-* URL `http://localhost:8080/api/phone/update/{id}`, METHOD = PUT, expects a path variable `id` and a JSON body.
+* URL `http://localhost:8080/api/phone/update/{id}`, METHOD = POST, expects a path variable `id` and a JSON body.
 
 **e.g.** Updating a phone at (http://localhost:8080/api/phone/update/samsungGalaxyA9) using
 
@@ -196,7 +196,7 @@ With this object the `username` which is a primary key in the administrator tabl
 
 #### Delete a phone by id
 
-* URL `http://localhost:8080/api/phone/delete/{id}`, METHOD = DELETE, expects a path variable `id`.
+* URL `http://localhost:8080/api/phone/delete/{id}`, METHOD = GET, expects a path variable `id`.
 
 **e.g.** Deleting a phone with the id `samsungGalaxyNote10` at (http://localhost:8080/api/phone/delete/samsungGalaxyNote10)
 
@@ -221,7 +221,7 @@ With this object the `username` which is a primary key in the administrator tabl
 
 #### Delete a manufacturer by manufacturer name
 
-* URL `http://localhost:8080/api/manufacturer/delete/{mname}`, METHOD = DELETE, expects a path variable `mname`.
+* URL `http://localhost:8080/api/manufacturer/delete/{mname}`, METHOD = GET, expects a path variable `mname`.
 
 **e.g.** Deleting a manufacturer with the name `Samsung` (http://localhost:8080/api/manufacturer/delete/Samsung)
 
