@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping(value = "/api")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AdministratorController {
 
     @Autowired
@@ -26,13 +27,13 @@ public class AdministratorController {
         return administratorService.save(administrator);
     }
 
-    @PutMapping("/administrator/update/{username}")
+    @PostMapping("/administrator/update/{username}")
     public Administrator updateAdministrator(@PathVariable String username,
                                              @RequestBody Administrator administrator) {
         return administratorService.update(username, administrator);
     }
 
-    @DeleteMapping("/administrator/delete/{username}")
+    @GetMapping("/administrator/delete/{username}")
     public ResponseEntity<Void> deleteAdministrator(@PathVariable String username) {
         if (administratorService.delete(username)) {
             return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);

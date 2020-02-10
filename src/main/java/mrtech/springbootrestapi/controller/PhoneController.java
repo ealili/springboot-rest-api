@@ -1,6 +1,5 @@
 package mrtech.springbootrestapi.controller;
 
-import mrtech.springbootrestapi.pojo.Administrator;
 import mrtech.springbootrestapi.pojo.Phone;
 import mrtech.springbootrestapi.pojo.PhoneInput;
 import mrtech.springbootrestapi.service.phone.PhoneService;
@@ -12,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping(value = "/api")
+@CrossOrigin(origins = "http://localhost:3000")
 public class PhoneController {
 
     @Autowired
@@ -42,12 +42,12 @@ public class PhoneController {
         return phoneService.save(phoneInput);
     }
 
-    @PutMapping("/phone/update/{id}")
+    @PostMapping("/phone/update/{id}")
     public Phone updatePhone(@PathVariable String id, @RequestBody PhoneInput phoneInput) {
         return phoneService.update(id, phoneInput);
     }
 
-    @DeleteMapping("/phone/delete/{id}")
+    @GetMapping("/phone/delete/{id}")
     public ResponseEntity<Void> deletePhone(@PathVariable String id) {
         if (phoneService.delete(id)) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);

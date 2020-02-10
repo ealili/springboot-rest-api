@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api")
 public class ManufacturerController {
 
@@ -27,7 +28,7 @@ public class ManufacturerController {
         return manufacturerService.save(manufacturer);
     }
 
-    @DeleteMapping("/manufacturer/delete/{mname}")
+    @GetMapping("/manufacturer/delete/{mname}")
     public ResponseEntity<Void> deleteAdministrator(@PathVariable String mname) {
         if (manufacturerService.delete(mname)) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
